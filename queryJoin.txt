@@ -1,0 +1,6 @@
+SELECT mahasiswa.nim, mahasiswa.nama AS Nama_Mahasiswa, mahasiswa.alamat, mahasiswa.tanggal_lahir,
+       mata_kuliah.kode_mk, mata_kuliah.nama_mk, mata_kuliah.sks,
+       perkuliahan.nilai
+FROM perkuliahan
+INNER JOIN mahasiswa ON perkuliahan.nim = mahasiswa.nim
+INNER JOIN mata_kuliah ON perkuliahan.kode_mk = mata_kuliah.kode_mk;
